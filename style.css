@@ -1,18 +1,18 @@
-.body{
+/* .body{
     background-color: rgb(0, 107, 55);
 }
 .sohial{
     width: 100%;
     /* margin-top: 300px; */
-    display: flex;
+    /* display: flex;
     align-items: center;
     justify-content: center;
     gap: 100px;
-    margin-top: 70px;
+    /* margin-top: 70px; */
     
     
-}
-.sohial-txt{
+
+/* .sohial-txt{
       font-family: "Playwrite HU", cursive;
   font-optical-sizing: auto;
   font-weight: weight;
@@ -25,8 +25,38 @@
 .sectiom-txt {
     max-width: 300px;
     display: flex;          /* Дозволяє використовувати flex-властивості */
-    justify-content: center; /* Центрує вміст по горизонталі */
-    align-items: center;    /* Центрує вміст по вертикалі */
-    margin: 0 auto;        
-    padding-top: 150px;
-}
+    /* justify-content: center; Центрує вміст по горизонталі */
+ /* align-items: center;    Центрує вміст по вертикалі */
+    /* margin: 0 auto;         */
+    /* padding-top: 150px; */
+/* } */ 
+
+.output {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 24px;
+        font-weight: 700;
+      }
+
+      .color-palette {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+        gap: 4px;
+        margin: 0 auto;
+        max-width: 400px;
+      }
+.color-palette .item {
+        padding: 0;
+        margin: 0;
+        border: none;
+        border-radius: 4px;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: transform 250ms ease-in-out;
+      }
+
+      .color-palette .item:hover {
+        transform: scale(1.1);
+      }
+
