@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>домашка 2 завдання 1</title>
+  <style>
+    .slider {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .slider__input {
+      width: 100%;
+    }
+
+    .slider__image {
+      display: block;
+      margin: 20px auto;
+      max-width: 100%;
+      transition: width 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+  <div class="slider">
+    <input type="range" min="1" max="100" value="50" class="slider__input" />
+    <img src="./IMG_4078.JPG" class="slider__image" />
+  </div>
+
+  <script>
+    // Проста реалізація debounce
+    function debounce(func, delay) {
+      let timeoutId;
+      return function(...args) {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => {
+          func.apply(this, args);
+        }, delay);
+      };
+    }
+
+    const sliderInput = document.querySelector('.slider__input');
+    const sliderImage = document.querySelector('.slider__image');
+
+    function updateImageSize() {
+      const value = sliderInput.value;
+      // Змінюємо розмір зображення від 100px до 500px
+      const size = 100 + (value * 4);
+      sliderImage.style.width = `${size}px`;
+      console.log('Розмір зображення оновлено:', size);
+    }
+
+    // Застосовуємо debounce до функції оновлення
+    const debouncedUpdate = debounce(updateImageSize, 300);
+
+    sliderInput.addEventListener('input', debouncedUpdate);
+  </script>
+</body>
+</html>
