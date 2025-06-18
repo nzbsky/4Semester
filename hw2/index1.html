@@ -29,7 +29,7 @@
   </div>
 
   <script>
-    // Проста реалізація debounce
+   
     function debounce(func, delay) {
       let timeoutId;
       return function(...args) {
@@ -45,13 +45,13 @@
 
     function updateImageSize() {
       const value = sliderInput.value;
-      // Змінюємо розмір зображення від 100px до 500px
+    
       const size = 100 + (value * 4);
       sliderImage.style.width = `${size}px`;
       console.log('Розмір зображення оновлено:', size);
     }
 
-    // Застосовуємо debounce до функції оновлення
+  
     const debouncedUpdate = debounce(updateImageSize, 300);
 
     sliderInput.addEventListener('input', debouncedUpdate);
