@@ -30,6 +30,18 @@
      margin: 0 auto;         
      padding-top: 150px; 
 } 
+.lesson{
+  background-color: blue;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+.lesson-title{
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+
+}
 
 /* .output {
         text-align: center;
